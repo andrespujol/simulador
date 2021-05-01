@@ -1,0 +1,143 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.logo {
+    font-size: 2em;
+    padding: 10px 0 0 10px;
+
+}
+.logo a{
+    text-decoration: none;
+    color: #E0FF00;
+}
+.links{ 
+    width: 70%;
+}
+header div nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 0;
+
+}
+header div nav ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    margin: 5px;
+
+}
+header div nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.6em;
+}
+
+.main__top {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 90%;
+    text-align: center;
+    
+}
+h1{
+    color: #E0FF00;
+}
+h3{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.claseDePrestamo {
+    text-align: center;
+}
+.claseDePrestamo input {
+    margin-top: 20px;
+}
+
+.prestamoPersonal, .prestamoHipotecario, .requisitosPersonales, .requisitosHipotecario {
+    display: none;
+    border: 2px solid #E0FF00;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.requisitosPersonales, .requisitosHipotecario {
+    background-color: #E0FF00;
+    border: 2px solid white;
+    color: #121212;
+}
+
+.main__resultados {
+    background-color: white;
+    color: #121212;
+    display: none;
+    margin-top: 20px;
+    width: 80%;
+    border: 2px solid #E0FF00;
+    margin-bottom: 20px;
+}
+.main__resultados p {
+    padding: 5px;
+}
+.main__resultados input {
+    width: 90%;
+    margin-left: 5%;
+}
+.btnDatos{
+    width: 90%;
+
+    background-color: #E0FF00;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    margin: 5px 5% 10px 5%;
+
+}
+.btn{
+    background-color: #E0FF00;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    height: 30px;
+    margin: 5px 5% 10px 5%;
+}
+.registros {
+    display: none;
+    border: 2px solid #E0FF00;
+    width: 80%;
+}
+footer {
+    margin-top: 100px;
+}
+
+@media only screen and (min-width: 769px) {
+    header div nav ul li a {
+        font-size: 1.2em;
+    }
+    .btn {
+        width: 30%;
+    }
+    .prestamoPersonal, .prestamoHipotecario, .main__resultados, .requisitosPersonales, .requisitosHipotecario, .registros {
+        width: 45%;
+    }
+    .main__resultados, .requisitosPersonales, .requisitosHipotecario {
+        text-align: left;
+    }
+    .main__resultados input {
+        width: 60%;
+    }
+}
+
