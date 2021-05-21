@@ -104,7 +104,13 @@ h3{
     border-radius: 5px;
     height: 20px;
     margin: 5px 5% 10px 5%;
-
+}
+.mensaje, .mensajeDatos {
+    display:none; 
+    color: red;   
+}
+.mensajeContacto {
+    display: none;
 }
 .btn{
     background-color: #E0FF00;
@@ -116,12 +122,49 @@ h3{
 }
 .registros {
     display: none;
-    border: 2px solid #E0FF00;
     width: 80%;
+    text-align: center;
+}
+#mostrarConsultas {
+    padding: 0
+}
+#consulta{
+    background-color: white;
+    border: 2px solid #E0FF00;
+    color: black;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
 }
 footer {
     margin-top: 100px;
 }
+
+/* cotización */
+
+.dolar, .euro {
+    border: 4px solid #E0FF00;
+    background-color: white;
+    color: black;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+.oficial-h1 {
+    width: 100%;
+    color: black;
+    text-align: center;
+    margin-bottom: 1em;
+    text-decoration: underline;
+}
+.oficial-h3, #venta, #ventaB, #compra,#compraB {
+    text-align: center;
+}
+
 
 @media only screen and (min-width: 769px) {
     header div nav ul li a {
@@ -139,5 +182,32 @@ footer {
     .main__resultados input {
         width: 60%;
     }
+    #nombre, #email {
+        width: 90%;
+    }
+
+/* cotizaciones */
+
+    .cotizaciones {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2em;
+    }
+    .dolar, .euro {
+        width: 40%;
+    }
+
+
 }
 
+@media only screen and (min-width: 1224px) {
+
+    #nombre, #email {
+        width: 90%;
+        display: block;
+    }
+    .btnDatos {
+        width: 90%;
+    }
+    
+}

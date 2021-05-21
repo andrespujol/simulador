@@ -1,19 +1,4 @@
-let interesMensualPersonal = 0.032
-let interesMensualHipotecario = 0.030
-let btnTipo = document.getElementById('btnTipo')
-let btnPersonal = document.getElementById('btnPersonal')
-let btnHipotecario = document.getElementById('btnHipotecario')
-let mostrarValores = document.getElementById('main__resultados')
-let prestamoPersonal = document.getElementById ('prestamoPersonal')
-let prestamoHipotecario = document.getElementById('prestamoHipotecario')
-let cantidad = document.getElementById('cantidad')
-let cuotas = document.getElementById('cuotas')
-let valorDeLaCuota = document.getElementById('valorDeLaCuota')
-let totalAPagar = document.getElementById('totalAPagar')
-let requisitosPersonales = document.getElementById('requisitosPersonales')
-let requisitosHipotecario = document.getElementById('requisitosHipotecario')
-let registros = document.getElementById('registros')
-
+let interesMensual = 0.032
 class prestamo {
     constructor(valor, plazo) {
         this.valor = valor
@@ -27,101 +12,125 @@ if (!simulador) {
 const create = (nuevoSimulador) => {
     simulador.push(nuevoSimulador)
 }
+let historialSimuladores = []
+
 function personal () {
     claseDePrestamo.style.display = 'none'
     prestamoPersonal.style.display = 'block'
     requisitosPersonales.style.display = 'block'
-}
+} 
 function hipotecario () {
     claseDePrestamo.style.display = 'none'
     prestamoHipotecario.style.display = 'block'
     requisitosHipotecario.style.display = 'block'
 }
-
-btnTipo.addEventListener('click', function() {
-    let tipoDePrestamo = document.getElementById('tipoDePrestamo')
-    if (tipoDePrestamo.value == 'personal') {
-        personal () 
-        
-        btnPersonal.addEventListener('click', function(){
-            let valor = document.getElementById('valorP').value;
-            let plazo = document.getElementById('plazoP').value
-            let mostrarValores = document.getElementById('main__resultados')
-            mostrarValores.style.display = 'block'
-            registros.style.display = 'block'
-            
-            let nuevoPrestamo = document.createElement('li')
-            nuevoPrestamo.textContent = 'Importe: $'+valor+' Plazos:  '+plazo +' cuotas';
-            registros.appendChild(nuevoPrestamo) 
-
-            nuevoPrestamo.addEventListener('click', function(event){
-                nuevoPrestamo.style.display = 'none'
-            }) 
-            let interes = valor *interesMensualPersonal * plazo
-            let cuota = valor/plazo
-            let valorCuota = Math.round( (interes / plazo) + cuota)
-            let total = valorCuota * plazo
-
-            if (valor == "" ) {
-                alert ('ops, no nos dijiste cuanto necesitas')
-                mostrarValores.style.display = 'none'
-                registros.style.display = 'none'
-            }else  {
-                for (i = 1 ; i<=plazo+1 ; i++) {
-                    if(i<=plazo){
-
-                        cantidad.innerHTML = valor
-                        cuotas.innerHTML = plazo
-                        valorDeLaCuota.innerHTML = valorCuota
-                        totalAPagar.innerHTML = total
-                        const nuevoSimulador = new prestamo (valor, plazo)
-                        create (nuevoSimulador)
-
-                        localStorage.setItem('simulador', JSON.stringify (nuevoSimulador))
-                    }else {
-                    }
-            }}
-        })
-    }else if (tipoDePrestamo.value == 'hipotecario') {
-        hipotecario ()
-
-        btnHipotecario.addEventListener('click', function(){
-            let valor = document.getElementById('valorH').value;
-            let plazo = document.getElementById('plazoH').value
-            let mostrarValores = document.getElementById('main__resultados')
-            cantidad.innerHTML += valor
-            cuotas.innerHTML = plazo
-            mostrarValores.style.display = 'block'
-            registros.style.display = 'block'
-
-            let nuevoPrestamo = document.createElement('li')
-            nuevoPrestamo.textContent = 'Importe: $'+valor+' Plazos:  '+plazo +' cuotas';
-            registros.appendChild(nuevoPrestamo) 
-
-            nuevoPrestamo.addEventListener('click', function(event){
-                nuevoPrestamo.style.display = 'none'
-            }) 
-
-            let interesH = valor *interesMensualHipotecario * plazo
-            let cuotaH = valor/plazo
-            let valorCuotaH = Math.round( (interesH / plazo) + cuotaH)
-            let totalH = valorCuotaH * plazo
-            if (valor == "") {
-                alert ('ops, no nos dijiste cuanto necesitas')
-                mostrarValores.style.display = 'none'
-            }else {
-            for (i = 1 ; i<=plazo+1 ; i++) {
-                if(i<=plazo){
-                    cantidad.innerHTML = valor
-                    cuotas.innerHTML = plazo
-                    valorDeLaCuota.innerHTML = valorCuotaH
-                    totalAPagar.innerHTML = totalH
-                    const nuevoSimulador = new prestamo (valor, plazo)
-                    create (nuevoSimulador)
-                    localStorage.setItem('simulador', JSON.stringify (nuevoSimulador))
-                }else {
-                }
-            }}
-        })
-    }
+function mostrarResultados () {
+    $('.main__resultados').css({ 
+        display: "block" 
     })
+    $('#registros').css({ 
+        display: "block" 
+    })
+}
+function calcular () {
+    let interes = valor *interesMensual * plazo
+    let cuota = valor/plazo
+    let valorCuota = Math.round( (interes / plazo) + cuota)
+    let total = valorCuota * plazo
+}
+$('#btnTipo').click(function(){
+    if($('#tipoDePrestamo').val() === "personal"){
+        personal()
+    }else {
+        hipotecario ()
+    }
+})
+
+$('#btnPersonal').click(function(){
+    const valor = $('#valorP').val()
+    $('#valorP').val("")
+    const plazo = $('#plazoP').val()
+    $('#plazoP').val("")
+    let interes = valor *interesMensual * plazo
+    let cuota = valor/plazo
+    let valorCuota = Math.round( (interes / plazo) + cuota)
+    let total = valorCuota * plazo
+    if (valor == "" ) {
+        $('.mensaje').show()
+    }else  {
+        mostrarResultados ()
+        $('.mostrarConsultas').prepend(`<li id="consulta">Importe: ${valor} - Cuotas: ${plazo} <br></li>`)
+        for (i = 1 ; i<=plazo+1 ; i++) {
+            if(i<=plazo){
+                cantidad.innerHTML = valor
+                cuotas.innerHTML = plazo
+                valorDeLaCuota.innerHTML = valorCuota
+                totalAPagar.innerHTML = total
+                const nuevoSimulador = new prestamo (valor, plazo)
+                create (nuevoSimulador)
+                localStorage.setItem('simulador', JSON.stringify (nuevoSimulador))
+            }else {
+            }
+
+    }}
+})
+
+$('#prestamoHipotecario').click(function(){
+    const valor = $('#valorH').val()
+    $('#valorH').val("")
+    const plazo = $('#plazoH').val()
+    $('#plazoH').val("")
+    let interes = valor *interesMensual * plazo
+    let cuota = valor/plazo
+    let valorCuota = Math.round( (interes / plazo) + cuota)
+    let total = valorCuota * plazo
+
+    if (valor == "") {
+        $(".mensaje").slideDown("fast")
+    }else {
+        mostrarResultados ()
+        $('.mostrarConsultas').prepend(`<li id="consulta">Importe: ${valor} - Cuotas: ${plazo} <br></li>`)
+
+    for (i = 1 ; i<=plazo+1 ; i++) {
+        if(i<=plazo){
+            cantidad.innerHTML = valor
+            cuotas.innerHTML = plazo
+            valorDeLaCuota.innerHTML = valorCuota
+            totalAPagar.innerHTML = total
+            const nuevoSimulador = new prestamo (valor, plazo)
+            create (nuevoSimulador)
+            localStorage.setItem('simulador', JSON.stringify (nuevoSimulador))
+            historialSimuladores.push(nuevoSimulador)
+        }else {
+        }
+    }}
+})
+
+const usuarios = [{}]
+
+$('#btnDatos').click(()=>{
+    if ($('#nombre').val() == ''  || $('#email').val() == ''){
+        $(".mensajeDatos").slideDown("fast")
+    }else  {
+    $('.datosDeContacto').css({
+        display: "none"
+    })    
+    $('.infoResultados').css({
+        display: "none"
+    })
+    $('.mensajeContacto').css({
+        display: "block"
+    })
+    $('.mensajeContacto').prepend(`<p id="mensajeContacto-final">Perfecto ${$('#nombre').val()}, en menos de 24 hs. nos pondremos en contacto con vos.</p>`)
+    usuarios.push({
+        name: $('#nombre').val(),
+        email: $('#email').val()
+    })
+    console.log(usuarios)
+}
+})
+$('#mostrarConsultas').click(function(){
+    $('#consulta').css({
+        display: 'none'
+    })
+})
