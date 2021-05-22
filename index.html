@@ -53,16 +53,16 @@
             <div class="prestamoPersonal" id="prestamoPersonal">
                 <h3>Calcula tu cuota</h3>
                 <div>
-                    <label for="valor">¿Cuánto necesitas?</label>
-                    <input type="number" id="valorP" required>
+                    <label for="valorP">¿Cuánto necesitas?</label>
+                    <input type="number" id="valorP" name="valorP" step="1" min="1"  required>
                 </div>
                 <div>
                     <label for="plazo">En cuántas cuotas lo querés pagar?</label>
                         <select name="plazo" id="plazoP">
-                        <option value="3">3</option>
-                        <option value="6">6</option>
-                        <option value="9">9</option>
-                        <option value="12">12</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                            <option value="9">9</option>
+                            <option value="12">12</option>
                         </select>
                 </div>
                 <p class="mensaje">ops, no nos dijiste cuanto necesitas</p>
@@ -93,8 +93,8 @@
                     <h3>Calcula tu cuota</h3>
                     <div>
                         <label for="valorH">¿Cuánto necesitas?</label>
-                        <input type="text" id="valorH" required>
-                        </div>
+                        <input type="number" id="valorH" name="valorP" step="1" min="1" required>
+                    </div>
                     <div>
                         <label for="plazo">En cuántas cuotas lo querés pagar?</label>
                             <select name="plazo" id="plazoH">

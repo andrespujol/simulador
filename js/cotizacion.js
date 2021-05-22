@@ -13,4 +13,3 @@ fetch(url)
     $('#compraEB').append(`<p>$${data.blue_euro.value_buy}</p>`)
 })
 
-
