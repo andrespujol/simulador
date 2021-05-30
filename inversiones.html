@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="/public/css/estilos.css">
+
+    <title>CoderBank</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">CoderBank</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/inversiones.html">Inversiones</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Préstamos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/prestamoPersonal.html">Personales</a></li>
+                                <li><a class="dropdown-item" href="/prestamoHipotecario.html">Hipotecarios</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="bannerCotizaciones">
+        <img src="/public/images/9.jpeg" alt="">
+        <h3>Inversiones</h3>
+        <p>Ahorra e invertí de la mejor manera en CoderBank</p>
+
+    </section>
+    <section class="plazoFijo">
+        <div class="plazoFijo_importe">
+            <h1>Simulá tu Plazo Fijo en CoderBank</h1>
+            <p>Ingresá el monto y la cantidad de días para conocer el importe total que recibirás cuando venza el plazo.</p>
+            <label for="number">¿Cuánto querés invertir?</label>
+            <input type="number" placeholder="$1.000" id="montoPlazoFijo">
+            <p class="mensaje">ops, no nos dijiste cuanto querés invertir</p>
+            <label for="monto">¿A cuántos días?</label>
+            <p>Si el vencimiento cae un día no hábil, el mismo se pasará al primer día hábil siguiente.</p>
+        </div>
+        <div class="plazoFijo_vencimiento">
+            <div id="plazoFijo_vencimiento_1">
+                <p>30 días</p>
+            </div>
+            <div id="plazoFijo_vencimiento_2">
+                <p>60 días</p>
+            </div>
+            <div id="plazoFijo_vencimiento_3">
+                <p>90 días</p>
+            </div>
+            <div id="plazoFijo_vencimiento_4">
+                <p>120 días</p>
+            </div>
+        </div>
+    </section>
+    <section class="plazoFijo_resultado">
+        <div class="plazoFijo_resultado_img">
+            <img src="/public/images/22.png" alt="foto plazo fijo">
+        </div>
+        <div class="plazoFijo_resultado_res">
+            <div class="plazoFijo_resultato_res_1">
+                <p>Al final del plazo fijo, recibís</p>
+            </div>
+            <div class="plazoFijo_resultato_res_2">
+                <h2>$ <span id="resultadoTotal"></span> </h2>
+            </div>
+            <div class="plazoFijoDetalle">
+                <div class="plazoFijo_resultato_res_3">
+                    <p>TNA</p>
+                    <p>37%</p>
+                </div>
+                <div class="plazoFijo_resultato_res_4">
+                    <p>Interés ganado</p>
+                    <p >$ <span id="interesGanado"></span></p>
+                </div>
+                <div class="plazoFijo_resultato_res_5">
+                    <p>Hasta el</p>
+                    <p><span id="fechaAcreditacion"></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner">
+        <div class="divBanner">
+            <p>COTIZACIONES DE MONEDAS EXTRANJERAS</p>
+        </div>
+    </section >
+    <section class="monedas">
+        <div class="cotizaciones">
+
+            <div class="dolar">
+                <div class="dolar_img">
+                    <img src="/public/images/dolares.jpeg" alt="dolar">
+                </div>
+                <div class="monedaValor">
+                    <h1  class="oficial-h1">Dólar</h1>
+                    <h3 class="errorApi"></h3>
+                    <div class="dolar-oficial">    
+                        <h3 class="oficial-h3">Oficial</h3>
+                        <label for="venta" class="tipoDeOperacion" id="venta">Venta</label>
+                        <label for="compra" class="tipoDeOperacion" id="compra">Compra</label>
+                    </div>
+                    <div class="dolar-blue">
+                        <h3 class="oficial-h3">Blue</h3>
+                        <label for="venta" class="tipoDeOperacion" id="ventaB">Venta</label>
+                        <label for="compra" class="tipoDeOperacion" id="compraB">Compra</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="euro">
+                <div class="euro_img">
+                    <img src="/public/images/euros.jpeg" alt="euro">
+                </div>
+                <div class="monedaValor">
+                    <h1  class="oficial-h1">Euro</h1>    
+                    <div class="euro-oficial">
+                        <h3 class="oficial-h3">Oficial</h3>
+                        <label for="venta" class="tipoDeOperacion" id="ventaE">Venta</label>
+                        <label for="compra" class="tipoDeOperacion" id="compraE">Compra</label>
+                    </div>
+                    <div class="euro-blue">
+                        <h3 class="oficial-h3">Blue</h3>
+                        <label for="venta" class="tipoDeOperacion" id="ventaEB">Venta</label>
+                        <label for="compra" class="tipoDeOperacion" id="compraEB">Compra</label>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="fecha">
+            <p>Fecha de actualización: <span class="fechaActualizacion"></span></p>
+        </div>
+    </section>
+    <section class="banner">
+        <div class="divBanner">
+            <p>SEGUÍ CRECIENDO</p>
+        </div>
+    </section >
+    <section class="emprendedorInfo" id="emprendedorInfo">
+        <div>
+            <h1>¿Querés ser emprendedor?</h1>
+            <h5>Conocé nuestro propuesta para emprendedores. </h5>
+            <ul>
+                <li>Asesorías</li>
+                <li>Operá con tasa diferencial</li>
+                <li>Líneas de financiación para préstamos a corto plazo (6 y 12 meses)</li>
+                <li>Acuerdos de cuenta corriente</li>
+                <li>Adelantá el cobro de tus ventas</li>
+                <li>Asegurá a tu empresa</li>
+            </ul>
+            <form action="https://formspree.io/f/xwkaobry" method="post">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" placeholder="Max Power" name="nombre" id="emprendedorNombre" required>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="maxpower@coder.com.ar" name="email" id="emprendedorEmail" required>
+                <label for="number" >Teléfono</label>
+                <input type="number" placeholder="1112345678" name="number" id="emprendedorTelefono" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="emprendedorMensaje" placeholder="Escriba su mensaje aquí" name="mensaje" id="" cols="30" rows="10" required></textarea>
+                <button id="emprendedorBtn">Enviar</button>
+            </form>
+        </div>
+
+    </section>
+    <footer>
+        <div><h6>copyright @Andrés Pujol</h6></div>
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>    
+    <script src="/js/inversiones.js"></script>
+    <script src="/js/users.js"></script>
+</body>
+</html>

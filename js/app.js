@@ -1,8 +1,9 @@
-let interesMensual = 0.032
+let interesMensual = 0.037
 class prestamo {
-    constructor(valor, plazo) {
+    constructor(valor, plazo, valorCuota) {
         this.valor = valor
         this.plazo = plazo
+        this.valorCuota = valorCuota
     }
 }
 let simulador = JSON.parse(localStorage.getItem('prestamo'))
@@ -14,100 +15,46 @@ const create = (nuevoSimulador) => {
 }
 let historialSimuladores = []
 
-function personal () {
-    claseDePrestamo.style.display = 'none'
-    prestamoPersonal.style.display = 'block'
-    requisitosPersonales.style.display = 'block'
-} 
-function hipotecario () {
-    claseDePrestamo.style.display = 'none'
-    prestamoHipotecario.style.display = 'block'
-    requisitosHipotecario.style.display = 'block'
-}
 function mostrarResultados () {
-    $('.main__resultados').css({ 
+    $('.resultados').css({ 
         display: "block" 
     })
-    $('#registros').css({ 
+    $('.registros').css({ 
         display: "block" 
     })
 }
-function calcular () {
+let formato = new Intl.NumberFormat('de-DE')
+localStorage.clear ()
+$('.btnPrestamos').on('click', function(){
+    const valor = $('.valor').val()
+    $('.valor').val("")
+    const plazo = $('.plazo').val()
+    $('.plazo').val("")
     let interes = valor *interesMensual * plazo
     let cuota = valor/plazo
     let valorCuota = Math.round( (interes / plazo) + cuota)
     let total = valorCuota * plazo
-}
-$('#btnTipo').click(function(){
-    if($('#tipoDePrestamo').val() === "personal"){
-        personal()
-    }else {
-        hipotecario ()
-    }
-})
-
-
-
-$('#btnPersonal').on('click', function(){
-    const valor = $('#valorP').val()
-    $('#valorP').val("")
-    const plazo = $('#plazoP').val()
-    $('#plazoP').val("")
-    let interes = valor *interesMensual * plazo
-    let cuota = valor/plazo
-    let valorCuota = Math.round( (interes / plazo) + cuota)
-    let total = valorCuota * plazo
-    if (valor == "" ) {
+    if (valor == "" || plazo == null ) {
         $('.mensaje').show()
     }else  {
         mostrarResultados ()
-        $('.mostrarConsultas').prepend(`<li id="consulta">Importe: ${valor} - Cuotas: ${plazo} <br></li>`)
-        for (i = 1 ; i<=plazo+1 ; i++) {
-            if(i<=plazo){
-                cantidad.innerHTML = valor
-                cuotas.innerHTML = plazo
-                valorDeLaCuota.innerHTML = valorCuota
-                totalAPagar.innerHTML = total
-                const nuevoSimulador = new prestamo (valor, plazo)
-                create (nuevoSimulador)
-                localStorage.setItem('simulador', JSON.stringify (nuevoSimulador))
+        let simulador = JSON.parse(localStorage.getItem('simulador'))
+        $('.mostrarConsultas').prepend(`<li id="consulta">Simulaste: $${formato.format(valor)} - En ${plazo} cuotas fijas de $ ${formato.format(valorCuota)}<br></li>`)
+        $('#cantidad').text(formato.format(valor))
+        cuotas.innerHTML = plazo
+        valorDeLaCuota.innerHTML = formato.format(valorCuota)
+        totalAPagar.innerHTML = formato.format(total)
+        if(simulador != null) {
+            const nuevoSimulador = new prestamo (formato.format(valor), plazo, formato.format(valorCuota))
+            simulador.push(nuevoSimulador)
+            localStorage.setItem('simulador', JSON.stringify (simulador))
             }else {
-            }
-
-    }}
-})
-
-$('#btnHipotecario').on('click',function(){
-    const valor = $('#valorH').val()
-    $('#valorH').val("")
-    const plazo = $('#plazoH').val()
-    $('#valorH').val("")
-    let interes = valor *interesMensual * plazo
-    let cuota = valor/plazo
-    let valorCuota = Math.round( (interes / plazo) + cuota)
-    let total = valorCuota * plazo
-
-    if (valor == "") {
-        $('.mensaje').show()
-    }else {
-        mostrarResultados ()
-        
-        $('.mostrarConsultas').prepend(`<li id="consulta">Importe: ${valor} - Cuotas: ${plazo} <br></li>`)
-
-    for (i = 1 ; i<=plazo+1 ; i++) {
-        if(i<=plazo){
-            cantidad.innerHTML = valor
-            cuotas.innerHTML = plazo
-            valorDeLaCuota.innerHTML = valorCuota
-            totalAPagar.innerHTML = total
-            const nuevoSimulador = new prestamo (valor, plazo)
-            create (nuevoSimulador)
-            localStorage.setItem('simulador', JSON.stringify (nuevoSimulador))
-        }else {
-        }
-    }}
-})
-
+                const nuevoSimulador = new prestamo (formato.format(valor), plazo, formato.format(valorCuota))
+                create (nuevoSimulador)
+                historialSimuladores.push(nuevoSimulador)
+                localStorage.setItem('simulador', JSON.stringify (historialSimuladores))
+    }
+}})
 $('#btnDatos').click(()=>{
     if ($('#nombre').val() == ''  || $('#email').val() == ''){
         $(".mensajeDatos").slideDown("fast")
@@ -122,11 +69,19 @@ $('#btnDatos').click(()=>{
         display: "block"
     })
     $('.mensajeContacto').prepend(`<p id="mensajeContacto-final">Perfecto ${$('#nombre').val()}, en menos de 24 hs. nos pondremos en contacto con vos.</p>`)
-    console.log(usuarios)
+    $('#cantidad').empty()
+    $('#cuotas').empty()
+    $('#valorDeLaCuota').empty()
+    $('#totalAPagar').empty()
 }
 })
-$('#mostrarConsultas').click(function(){
-    $('#consulta').css({
-        display: 'none'
-    })
+$('.valor').on('click', function(){
+    $('.datosDeContacto').show()
+    $('.infoResultados').show()
+    $('.mensajeContacto').show()
+    $('#mensajeContacto-final').remove()
+    $('#nombre').val('')
+    $('#email').val('')
+    $('.mensaje').hide()
 })
+
