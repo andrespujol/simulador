@@ -39,7 +39,7 @@ $('.btnPrestamos').on('click', function(){
     }else  {
         mostrarResultados ()
         let simulador = JSON.parse(localStorage.getItem('simulador'))
-        $('.mostrarConsultas').prepend(`<li id="consulta">Simulaste: $${formato.format(valor)} - En ${plazo} cuotas fijas de $ ${formato.format(valorCuota)}<br></li>`)
+        $('.mostrarConsultas').prepend(`<li id="consulta">Simulaste: $${formato.format(valor)} <br> En ${plazo} cuotas fijas de $ ${formato.format(valorCuota)}<br></li>`)
         $('#cantidad').text(formato.format(valor))
         cuotas.innerHTML = plazo
         valorDeLaCuota.innerHTML = formato.format(valorCuota)

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -16,41 +18,37 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html">CoderBank</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/inversiones.html">Inversiones</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Préstamos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/prestamoPersonal.html">Personales</a></li>
-                                <li><a class="dropdown-item" href="/prestamoHipotecario.html">Hipotecarios</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/prestamoPersonal.html">Préstamos personales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/prestamoHipotecario.html" >Préstamos hipotecaros</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <section class="bannerHipotecario">
-        <img src="/public/images/10.jpg" alt="">
-        <h3>Préstamos hipotecaros</h3>
-        <p>Hace realidad el sueño de tu casa propia.</p>
-        <p>Podés pedirlo en 48, 60, 72 u 84 cuotas.</p>
+    <section class="banners">
+        <img src="/public/images/bannerHipotecario.jpeg"class="imgBanner" alt="imagen préstamo hipotecario">
+        <div class="bannerInfo">
+            <h3>Préstamos hipotecaros</h3>
+            <p>Hace realidad el sueño de tu casa propia.</p>
+            <p>Podés pedirlo en 48, 60, 72 u 84 cuotas.</p>
+        </div>
+
     </section>
     <section class="simulador">
         <div class="simulador__container">
@@ -69,7 +67,7 @@
                             <option value="84">84</option>
                         </select>
                 </div>
-                <p class="mensaje">ops, no nos dijiste cuanto necesitas</p>
+                <p class="mensaje">Debes completar los campos</p>
                 <button class="btnPrestamos" id="btnHipotecario">Enviar</button>
             </div>
         </div>
@@ -93,7 +91,7 @@
         <div class="main__resultados" id="main__resultados">
             <div class="infoResultados">
                 <p>Estás por solicitar: $<span id="cantidad"></span> y lo queres pagar en <span id="cuotas"></span> cuotas.</p>
-                <p>La tasa de interés mensual es: 3%</p>
+                <p>La tasa de interés es: 37%</p>
                 <p>El valor de tu cuota es: $<span id="valorDeLaCuota"></span></p>
                 <p>El total a devolver es: $ <span id="totalAPagar"></span></p>    
                 <p>Si estas de acuerdo, te pedimos que nos dejes un teléfono así te contactamos para cerrar la operación y que empieces a disfrutar de tu dinero.</p>
@@ -120,7 +118,7 @@
         </div>
     </section>
     <footer>
-        <div><h6>copyright @Andrés Pujol</h6></div>
+        <div><a href="https://www.linkedin.com/in/andrespujol/" class="linkFooter"> <h6>@copyright Andrés Pujol</h6></a></div>
         
     </footer>
 

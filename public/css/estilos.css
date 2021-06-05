@@ -1,610 +1,514 @@
-
 body {
-    background-color: white;
-    font-family: 'Roboto', sans-serif;
-}
+  background-color: white;
+  font-family: 'Roboto', sans-serif; }
 
-/* index */
+header .bg-light {
+  background-color: #212227 !important; }
 
-.bg-light {
-    background-color: #212227 !important;
-}
-.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link {
-    color: white;
-}
-.dropdown-menu {
-    background-color: #212227;
-    border: none;
-}
-.dropdown-item, .navbar-light .navbar-nav .nav-link {
-    color: white;
-}
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: white;
-}
-.btn-outline-success {
-    color: white;
-    border-color: white;
-}
-.carrusel-info {
-    text-align: center;
-    padding-top: 1em;
-}
-.carrusel-info button {
+header .navbar-light .navbar-brand, header .navbar-light .navbar-nav .nav-link.active, header .navbar-light .navbar-nav .nav-link {
+  color: white; }
+
+header .navbar-light .navbar-brand:hover, header .navbar-light .navbar-nav .nav-link.active, header .navbar-light .navbar-nav .nav-link:hover {
+  color: #333646; }
+
+header .container-fluid {
+  display: flex;
+  justify-content: space-between; }
+
+header .navbar-collapse {
+  justify-content: flex-end; }
+
+.carrusel .carrusel-info {
+  text-align: center;
+  padding-top: 1em; }
+  .carrusel .carrusel-info .btnSimula {
     border: none;
     background-color: #212227;
     border-radius: 10px;
     width: 10em;
-    color: white;
-}
-.divBanner {
-    display: flex;
-    background-color: #8D9D90;
-    height: 4em;
-    margin: 2em 0;
-}
-.divBanner p {
+    color: white; }
+
+.banner .divBanner {
+  display: flex;
+  align-items: center;
+  background-color: #8D9D90;
+  height: 4em;
+  margin: 2em 0; }
+  .banner .divBanner .divBanner p {
     margin: 0;
-    display: flex;
-    text-align: center;
-    align-items:center;
-    margin: 0 auto;
-}
-.emprendedor{
-    margin-bottom: 1em;
-}
-.emprendedor__div1 img, .emprendedor__div2 img, .emprendedor__div3 img, .emprendedor__div4 img{
+    text-align: center; }
+
+.emprendedor {
+  margin-bottom: 1em; }
+  .emprendedor .emprendedor__div1 img, .emprendedor .emprendedor__div2 img, .emprendedor .emprendedor__div3 img, .emprendedor .emprendedor__div4 img {
     width: 100%;
-    margin-bottom: 1em;
-}
-.emprendedor__div1 h4, .emprendedor__div1 p, .emprendedor__div2 h4, .emprendedor__div2 p, .emprendedor__div3 h4, .emprendedor__div3 p{
-    text-align: center;
-}
-.btnConoceMas {
+    margin-bottom: 1em; }
+  .emprendedor .emprendedor__div1 h4, .emprendedor .emprendedor__div1 p, .emprendedor .emprendedor__div2 h4, .emprendedor .emprendedor__div2 p, .emprendedor .emprendedor__div3 h4, .emprendedor .emprendedor__div3 p {
+    text-align: center; }
+  .emprendedor .btnConoceMas {
     width: 60%;
     margin-left: 20%;
     border: none;
     background-color: #212227;
     height: 3em;
     border-radius: 5px;
-    color: white;
-}
+    color: white; }
+
+h3, h4 {
+  font-weight: bold; }
+
 .demoPlazoFijo {
-    margin-bottom: 1em;
-}
-.demoPlazoFijo_banner img{
-    width: 100%;
-}
+  margin-bottom: 1em; }
+  .demoPlazoFijo .demoPlazoFijo_banner img {
+    width: 100%; }
+
 footer {
-    background-color: #212227;
-    height: 3em;
-    display: flex;
-}
-footer div {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
-footer div h6 {
-    margin: 0;
-    color: white;
-    padding-left: 5px;
-}
+  background-color: #212227;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  padding-left: 5px; }
+  footer .linkFooter {
+    text-decoration: none;
+    color: white; }
 
-/* banners */
-
-.bannerHipotecario, .bannerPersonal, .bannerCotizaciones{
-    margin-bottom: 1em;
-}
-.bannerHipotecario img, .bannerPersonal img, .bannerCotizaciones img{
+.banners {
+  margin-bottom: 1em; }
+  .banners .imgBanner {
     width: 100%;
-    margin-bottom: 1em;
-}
-.bannerHipotecario h3, .bannerHipotecario p, .bannerPersonal h3, .bannerPersonal p, .bannerCotizaciones h3, .bannerCotizaciones p {
+    margin-bottom: 1em; }
+  .banners .bannerInfo h3, .banners .bannerInfo p {
     text-align: center;
-    margin: 0;
-}
-
-/* Préstamos */
+    margin: 0; }
 
 .simulador {
-    background-color: #878E76;
-    margin-bottom: 1em;
-    height: 12em;
-}
-.simulador__container  {
-
+  background-color: #878E76;
+  margin-bottom: 1em;
+  height: 12em; }
+  .simulador .simulador__container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 11em;
-}
-.prestamoHipotecario h3, .prestamoPersonal h3{
-    text-align: center;
-    padding-top: 0.5em;
-}
-label {
-    padding-left: 5px;
-}
-.valor {
-    width: 10em;
-}
-input, select {
-    border: 2px solid #212227;
-    border-radius: 5px;
-}
-.cuotas {
-    padding-top: 5px;
-}
-select {
-    width: 2.7em;
-}
+    height: 11em; }
+    .simulador .simulador__container .prestamoHipotecario h3, .simulador .simulador__container .prestamoPersonal h3 {
+      text-align: center;
+      padding-top: 0.5em; }
+    .simulador .simulador__container label {
+      padding-left: 5px; }
+    .simulador .simulador__container .valor {
+      width: 10em; }
+    .simulador .simulador__container input, .simulador .simulador__container select {
+      border: 2px solid #212227;
+      border-radius: 5px; }
+    .simulador .simulador__container .cuotas {
+      padding-top: 5px; }
+      .simulador .simulador__container .cuotas select {
+        width: 2.7em; }
+
 .mensaje, .mensajeDatos {
-    display: none;
-    padding-left: 5px;
-    color: red;
-    text-align: center;
-}
-.btnPrestamos, .btnDatos, .emprendedorInfo button  {
-    border: none;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    width: 5em;
-    margin-top: 1em;
-    border-radius: 5px;
-    background-color: #212227 !important;
-    color: white;
+  display: none;
+  padding-left: 5px;
+  color: red;
+  text-align: center; }
 
-}
-.btnPrestamos:hover, .btnDatos:hover, .btnSimula:hover,  .emprendedorInfo button:hover {
-    background-color: #333646 !important;
-}
+.btnPrestamos, .btnDatos, .emprendedorInfo button {
+  border: none;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 5em;
+  margin-top: 1em;
+  border-radius: 5px;
+  background-color: #212227 !important;
+  color: white; }
 
-
-/* requisitos */
-
-.requisitos {
-    background-color: #c8d6cb;
-    margin-bottom: 1em;
-}
-.requisitosDiv h3 {
-    text-align: center;
-    padding-top: 1em;
-}
-.requisitosDiv {
-    width: 90%;
-    margin: 0 auto;
-    padding-bottom: 1em;
-}
-.requisitosDiv ul li {
-    padding-bottom: 5px;
-}
-
-/* resultados */
+.btnPrestamos:hover, .btnDatos:hover, .btnSimula:hover, .emprendedorInfo button:hover {
+  background-color: #333646 !important; }
 
 .resultados {
-    background-color: #8D9D90;
-    padding-left: 5px;
-    margin-bottom: 1em;
-    display: none;
-}
-.main__resultados {
+  background-color: #8D9D90;
+  padding-left: 5px;
+  margin-bottom: 1em;
+  display: none; }
+  .resultados .main__resultados {
     width: 90%;
-    margin: 0 auto;
-}
-.infoResultados {
-    padding-top: 1em;
-}
-.infoResultados p {
-    margin: 0;
-}
-.datos_nombre, .datos_email {
-    width: 90%;
-}
-.datosDeContacto {
-    padding: 1em 0;
-}
-span {
-    font-weight: bold
-}
-.mensajeContacto {
-    display: none;
-}
-#mensajeContacto-final {
-    padding: 1em;
-    text-align: center;
-}
+    margin: 0 auto; }
+    .resultados .main__resultados .infoResultados {
+      padding-top: 1em; }
+      .resultados .main__resultados .infoResultados .infoResultados p {
+        margin: 0; }
+    .resultados .main__resultados .datosDeContacto {
+      padding: 1em 0;
+      margin: 0 auto;
+      margin-left: 5%; }
+      .resultados .main__resultados .datosDeContacto .datos_nombre, .resultados .main__resultados .datosDeContacto .datos_email {
+        width: 90%;
+        margin: 0 auto; }
+    .resultados .main__resultados .mensajeContacto {
+      display: none; }
+      .resultados .main__resultados .mensajeContacto #mensajeContacto-final {
+        padding: 1em;
+        text-align: center; }
 
-/* registros */
+span {
+  font-weight: bold; }
 
 .registros {
-    background-color: #ABC4A1;
-    display: none;
-    margin-bottom: 1em;
-}
-.mostrarRegistros {
-    padding-bottom: 1em;
-}
-.mostrarRegistros h3 {
+  background-color: #ABC4A1;
+  display: none;
+  margin-bottom: 1em; }
+  .registros .mostrarRegistros {
+    padding-bottom: 1em; }
+  .registros .mostrarRegistros h3 {
     text-align: center;
-    padding: 1em 0;
-}
-.mostrarRegistros ul{
-    width: 90%;
+    padding: 1em 0; }
+  .registros .mostrarRegistros ul {
+    width: 95%;
     margin: 0 auto;
-    padding: 0;
-}
-.mostrarRegistros ul li {
+    padding: 0; }
+  .registros .mostrarRegistros ul li {
     border: 2px solid #212227;
     list-style: none;
     padding-left: 5px;
     text-align: center;
     border-radius: 5px;
-    margin-bottom: 1em;
-}
+    margin-bottom: 1em; }
 
-/* inversiones */
+.requisitos {
+  background-color: #c8d6cb;
+  margin-bottom: 1em; }
+  .requisitos .requisitosDiv {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 1em; }
+  .requisitos .requisitosDiv h3 {
+    text-align: center;
+    padding-top: 1em; }
+  .requisitos .requisitosDiv ul li {
+    padding-bottom: 5px; }
 
 .cotizaciones {
-    padding: 1em 0;
-}
-.plazoFijo {
-    width: 90%;
-    margin: 0 auto;
-}
-.plazoFijo_importe h1 {
-    text-align: center;
-}
-.plazoFijo_importe p {
-    color: #878E76;
-    text-align: center;
-}
-.plazoFijo_importe label{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1em;
-    font-size: 1.3em;
-}
-.plazoFijo_importe input {
-    border: 2px solid #212227;
-    width: 100%;
-    margin-bottom: 1em;
-}
-.plazoFijo_vencimiento {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-}
-.plazoFijo_vencimiento div {
-    display: flex;
-    width: 40%;
-    height: 4em;
-    background-color: #333646;
-    margin-bottom: 1em;
-    border-radius: 5px;
-}
-.plazoFijo_vencimiento div:hover {
+  padding: 1em 0; }
 
-    background-color: #878E76;
-}
+.plazoFijo {
+  width: 90%;
+  margin: 0 auto; }
+
+.plazoFijo_importe h1 {
+  text-align: center; }
+
+.plazoFijo_importe p {
+  color: #878E76;
+  text-align: center; }
+
+.plazoFijo_importe label {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+  font-size: 1.3em; }
+
+.plazoFijo_importe input {
+  border: 2px solid #212227;
+  width: 100%;
+  margin-bottom: 1em; }
+
+.plazoFijo_vencimiento {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%; }
+
+.plazoFijo_vencimiento div {
+  display: flex;
+  width: 40%;
+  height: 4em;
+  background-color: #333646;
+  margin-bottom: 1em;
+  border-radius: 5px; }
+
+.plazoFijo_vencimiento div:hover {
+  background-color: #878E76; }
+
 .plazoFijo_vencimiento div p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    color: white;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: white; }
+
 .plazoFijo_resultado_img {
-    display: none;
-}
+  display: none; }
+
 .plazoFijo_resultato_res_1 p {
-    text-align: center;
-}
-.plazoFijo_resultato_res_2 h2{
-    text-align: center;
-}
+  text-align: center; }
+
+.plazoFijo_resultato_res_2 h2 {
+  text-align: center; }
+
 .plazoFijoDetalle {
-    display: grid;
-    grid-template-columns: 20% 40% 40%;
-    width: 90%;
-    margin-left: 5%;
-}
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+  width: 90%;
+  margin-left: 5%; }
+
 .plazoFijo_resultato_res_3 p:first-child, .plazoFijo_resultato_res_4 p:first-child, .plazoFijo_resultato_res_5 p:first-child {
-    color: #333646;
-}
-.plazoFijo_resultato_res_3 p:last-child, .plazoFijo_resultato_res_4 p:last-child, .plazoFijo_resultato_res_5 p:last-child  {
-    color: #1a2b7e;
-    font-weight: bold;
-}
-.plazoFijo_resultato_res_3 p, .plazoFijo_resultato_res_4 p, .plazoFijo_resultato_res_5 p  {
-    margin: 0;
-    text-align: center;
-    font-size: 0.8em;
-}
+  color: #333646; }
+
+.plazoFijo_resultato_res_3 p:last-child, .plazoFijo_resultato_res_4 p:last-child, .plazoFijo_resultato_res_5 p:last-child {
+  color: #1a2b7e;
+  font-weight: bold; }
+
+.plazoFijo_resultato_res_3 p, .plazoFijo_resultato_res_4 p, .plazoFijo_resultato_res_5 p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8em; }
+
 .dolar_img, .euro_img {
-    display: none;
-}
+  display: none; }
+
 .dolar, .euro {
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 1em;
-    padding: 1em 0;
-    text-align: center;
-}
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding: 1em 0;
+  text-align: center; }
+
 .oficial-h1 {
-    padding-bottom: 1em;
-}
+  padding-bottom: 1em; }
+
 .dolar-oficial, .dolar-blue, .euro-oficial, .euro-blue {
-    display: flex;
-    flex-wrap: wrap;
-}
+  display: flex;
+  flex-wrap: wrap; }
+
 .dolar-oficial h3, .dolar-blue h3, .euro-oficial h3, .euro-blue h3 {
-    width: 100%;
-    color: #333646;
-} 
+  width: 100%;
+  color: #333646; }
+
 .tipoDeOperacion {
-    width: 50%;
-}
-.fecha p{
-    text-align: center;
-}
+  width: 50%; }
+
+.fecha p {
+  text-align: center; }
+
 .conversor {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 90%;
-}
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%; }
+
 .conversor_img {
-    display: none;
-}
+  display: none; }
+
 .conversor_calculo_select {
-    width: 90%;
-    height: 2em;
-}
+  width: 90%;
+  height: 2em; }
+
 .conversor_calculo_operacion {
-    width: 45%;
-    border: none;
-    border-radius: 5px;
-    background-color: #333646;
-    color: white;
-    margin-top: 1em;
-}
+  width: 45%;
+  border: none;
+  border-radius: 5px;
+  background-color: #333646;
+  color: white;
+  margin-top: 1em; }
+
 #monedaImporte {
-    width: 90%;
-    height: 2em;
-}
+  width: 90%;
+  height: 2em; }
+
 .conversor_calculo_convertir {
-    width: 90%;
-    border: none;
-    border-radius: 5px;
-    background-color: #333646;
-    color: white;
-}
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  background-color: #333646;
+  color: white; }
+
 .errorApi {
-    display: none;
-}
-.contacto img{
-    width: 100%;
-}
+  display: none; }
+
+.contacto img {
+  width: 100%; }
 
 .emprendedorInfo {
-    background-color: #878E76;
-    text-align: center;
-    margin-bottom: 1em;
-    padding-bottom: 1em;
-}
+  text-align: center;
+  margin-bottom: 1em; }
+
+.emprendedorInfo_form {
+  background-color: #878E76;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-radius: 2%;
+  box-shadow: 5px 5px 5px 5px #212227; }
+
 .emprendedorInfo input, .emprendedorInfo textarea {
-    width: 90%;
-    border: none;
-}
+  width: 90%;
+  border: none; }
+
+.emprendedorInfo_encabezado {
+  width: 90%;
+  margin: 0 auto; }
+
+.emprendedorInfo ul {
+  padding: 0; }
+
 .emprendedorInfo ul li {
-    text-align: left;
-}
+  text-align: center;
+  list-style: none; }
 
+.emprendedorInfo_img img {
+  width: 90%;
+  border-radius: 2%;
+  box-shadow: 5px 5px 5px 5px #212227; }
 
-
-@media only screen and (min-width: 481px){
-    .datos_nombre, .datos_email {
-        width: 70%;
-    }
-    .datos_email {
-        margin-top: 5px;
-        margin-left: 0.8em;
-    }
-    .plazoFijo_importe input {
-        width: 80%;
-        margin-left: 10%;
-    }
-    .plazoFijoDetalle {
-        display: grid;
-        grid-template-columns: 20% 40% 40%;
-        width: 70%;
-        margin-left: 15%;
-    }
-}
+@media only screen and (min-width: 481px) {
+  .datos_email {
+    margin-top: 5px;
+    margin-left: 0.8em; }
+  .plazoFijo_importe input {
+    width: 80%;
+    margin-left: 10%; }
+  .plazoFijoDetalle {
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    width: 70%;
+    margin-left: 15%; } }
 
 @media only screen and (min-width: 769px) {
-
-    .dropdown-item {
-        font-size: 1em;
-    }
-    .divBanner p {
-        margin: 0 auto;
-    }
-    .emprendedor {
-        display: grid;
-        grid-template-areas: 
-            "uno  dos"
-            "tres cua"
-    }
-    .emprendedor__div1 {
-        grid-area: uno;
-        width: 90%;
-        margin-left: 5%;
-    }
-    .emprendedor__div1 img, .emprendedor__div2 img, .emprendedor__div3 img, .emprendedor__div4 img {
-        width: 100%;
-        height: 20em;
-    }
-    .emprendedor__div2 {
-        grid-area: dos;
-        width: 90%;
-    }
-    .emprendedor__div3 {
-        grid-area: tres;
-        width: 90%;
-        margin-left: 5%;
-    }
-    .emprendedor__div4 {
-        grid-area: cua;
-        width: 90%;
-    }
-    .bannerPersonal {
-        height: 100%;
-    }
-    .datos_nombre, .datos_email {
-        width: 80%;
-    }
-    .datosDeContacto {
-        width: 70%;
-        margin: 0 auto;
-    }
-    #mensajeContacto-final {
-        font-size: 1.2em;
-    }
-    .mostrarRegistros ul{
-        width: 50%;
-    }
-    .cotizaciones {
-        display: flex;
-        flex-direction: column;
-    }
-    .dolar_img, .euro_img {
-        display: block;
-        width: 40%;
-    }
-    .dolar_img img, .euro_img img {
-        width: 100%;
-        height: 15.3em;
-    }
-    .dolar, .euro {
-        display: flex;
-        justify-content: space-around;
-        width: 90%;
-    }
-    .monedaValor {
-        width: 40%;
-    }
-    .plazoFijo_importe input {
-        width: 60%;
-        margin-left: 20%;
-    }
-    .plazoFijo_vencimiento div {
-        width: 20%;
-    }
-    .plazoFijo_resultado {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 2em;
-        width: 80%;
-        margin: 0 auto;
-    }
-    .plazoFijo_resultado_img {
-        display: block;
-        width: 40%;
-    }
-    .plazoFijo_resultado_res {
-        width: 60%;
-        padding-top: 3em;
-    }
-    .plazoFijo_resultado_img img{
-        width: 100%;
-        height: 20em;
-    }
-    .plazoFijoDetalle {
-        display: grid;
-        grid-template-columns: 20% 40% 40%;
-        width: 70%;
-        margin-left: 15%;
-    }
-    .contacto img{
-        width: 100%;
-    }
-    .emprendedorInfo div {
-        width: 70%;
-        margin: 0 auto;
-    }
-    .emprendedorInfo label {
-        display: block;
-    }
-    .emprendedorInfo input, .emprendedorInfo textarea {
-        width: 70%;
-    }
-}
+  .dropdown-item {
+    font-size: 1em; }
+  .divBanner p {
+    margin: 0 auto; }
+  .emprendedor {
+    display: grid;
+    grid-template-areas: "uno  dos" "tres cua"; }
+  .emprendedor__div1 {
+    grid-area: uno;
+    width: 90%;
+    margin-left: 5%; }
+  .emprendedor__div1 img, .emprendedor__div2 img, .emprendedor__div3 img, .emprendedor__div4 img {
+    width: 100%;
+    height: 20em; }
+  .emprendedor__div2 {
+    grid-area: dos;
+    width: 90%; }
+  .emprendedor__div3 {
+    grid-area: tres;
+    width: 90%;
+    margin-left: 5%; }
+  .emprendedor__div4 {
+    grid-area: cua;
+    width: 90%; }
+  .bannerPersonal {
+    height: 100%; }
+  .resultados .main__resultados .datosDeContacto {
+    width: 50%;
+    margin-left: 25%; }
+    .resultados .main__resultados .datosDeContacto .datos_nombre, .resultados .main__resultados .datosDeContacto .datos_email {
+      width: 100%; }
+  #mensajeContacto-final {
+    font-size: 1.2em; }
+  .mostrarRegistros ul {
+    width: 50%; }
+  #consulta {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1em; }
+  .cotizaciones {
+    display: flex;
+    flex-direction: column; }
+  .dolar_img, .euro_img {
+    display: block;
+    width: 40%; }
+  .dolar_img img, .euro_img img {
+    width: 100%;
+    height: 15.3em; }
+  .dolar, .euro {
+    display: flex;
+    justify-content: space-around;
+    width: 90%; }
+  .monedaValor {
+    width: 40%; }
+  .plazoFijo_importe input {
+    width: 60%;
+    margin-left: 20%; }
+  .plazoFijo_vencimiento div {
+    width: 20%; }
+  .plazoFijo_resultado {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2em;
+    width: 80%;
+    margin: 0 auto; }
+  .plazoFijo_resultado_img {
+    display: block;
+    width: 40%; }
+  .plazoFijo_resultado_res {
+    width: 60%;
+    padding-top: 3em; }
+  .plazoFijo_resultado_img img {
+    width: 100%;
+    height: 20em; }
+  .plazoFijoDetalle {
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    width: 70%;
+    margin-left: 15%; }
+  .contacto img {
+    width: 100%; }
+  .emprendedorInfo label {
+    display: block; }
+  .emprendedorInfo input, .emprendedorInfo textarea {
+    width: 90%; }
+  .emprendedorInfo {
+    display: flex;
+    flex-wrap: wrap; }
+  .emprendedorInfo_encabezado {
+    width: 80%;
+    margin: 0 auto; }
+  .emprendedorInfo_form, .emprendedorInfo_img {
+    width: 45%;
+    margin: 0 auto; }
+  #emprendedorInfo_form, .emprendedorInfo_img img {
+    height: 30em; } }
 
 @media only screen and (min-width: 1224px) {
-    body {
-        font-size: 1.3em;
-    }
-    img {
-        height: 25em;
-    }
-    .dropdown-item {
-        font-size: 1.2em;
-    }
+  body {
+    font-size: 1.3em; }
+  img {
+    height: 25em; }
+  .btnConoceMas:hover {
+    background-color: #333646; }
+  .emprendedorInfo input, .emprendedorInfo textarea {
+    width: 90%; } }
 
-    .btnConoceMas:hover{
-        background-color: #333646;
-    }
-    .emprendedorInfo input, .emprendedorInfo textarea {
-        width: 50%;
-    }
-}
 @media only screen and (min-width: 1624px) {
-
-    .dropdown-item {
-        font-size: 1.3em;
-    }
-    .bannerCotizaciones img {
-        height: 35em;
-    }
-    .plazoFijo_importe input {
-        width: 40%;
-        margin-left: 30%;
-    }
-    .plazoFijo_vencimiento div {
-        width: 10%;
-    }
-    .mostrarRegistros ul{
-        width: 30%;
-    }
-    .mostrarRegistros ul li{
-        height: 4em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #mensajeContacto-final {
-        font-size: 1.5em;
-    }
-    .plazoFijo_resultado_img {
-        display: block;
-        width: 40%;
-    }
-    .plazoFijo_resultado_res {
-        width: 60%;
-        padding-top: 8em;
-    }
-    .plazoFijo_resultado_img img{
-        width: 100%;
-        height: 25em;
-    }
-    .plazoFijo_resultato_res_3 p, .plazoFijo_resultato_res_4 p, .plazoFijo_resultato_res_5 p  {
-        font-size: 1em;
-    }
-    ::-webkit-scrollbar {
-        display: none;
-    }
-}
+  img {
+    height: 30em; }
+  .plazoFijo_importe input {
+    width: 40%;
+    margin-left: 30%; }
+  .plazoFijo_vencimiento div {
+    width: 10%; }
+  .mostrarRegistros ul {
+    width: 30%; }
+  .mostrarRegistros ul li {
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  #mensajeContacto-final {
+    font-size: 1.5em; }
+  .plazoFijo_resultado_img {
+    display: block;
+    width: 40%; }
+  .plazoFijo_resultado_res {
+    width: 60%;
+    padding-top: 8em; }
+  .plazoFijo_resultado_img img {
+    width: 100%;
+    height: 25em; }
+  .plazoFijo_resultato_res_3 p, .plazoFijo_resultato_res_4 p, .plazoFijo_resultato_res_5 p {
+    font-size: 1em; }
+  ::-webkit-scrollbar {
+    display: none; } }
