@@ -17,11 +17,24 @@ header {
             display: flex;
             justify-content: space-between;
         }
+        .navbar-brand {
+            width: 40%;
+            .logo {
+                width: 100%;
+            }
+        }
         .navbar-collapse {
             justify-content: flex-end;
         }
 }
 .carrusel {
+    .w-100 {
+        height: 15em;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        bottom: 10em;
+    }        
     .carrusel-info {
         text-align: center;
         padding-top: 1em;
@@ -34,6 +47,7 @@ header {
         }
     }
 }
+
 .banner {
     .divBanner {
         display: flex;
@@ -421,12 +435,31 @@ span {
 }
 
 @media only screen and (min-width: 769px) {
-
-    .dropdown-item {
-        font-size: 1em;
+    header {     
+    .navbar-brand {
+        width: 40%;
+        .logo {
+            width: 70%;
+        }
     }
+}
     .divBanner p {
         margin: 0 auto;
+    }
+    .carrusel {
+        .w-100 {
+            height: 25em;
+        }
+    }   
+    .demoPlazoFijo {
+        .demoPlazoFijo_banner img{
+            height: 20em;
+        }
+    }
+    .banners {
+        .imgBanner {
+            height: 25em;
+        }
     }
     .emprendedor {
         display: grid;
@@ -563,8 +596,15 @@ span {
     body {
         font-size: 1.3em;
     }
-    img {
-        height: 25em;
+    .carrusel {
+        .w-100 {
+            height: 26.3em;
+        }
+    }   
+    .banners {
+        .imgBanner {
+            height: 26.3em;
+        }
     }
     .btnConoceMas:hover{
         background-color: #333646;
@@ -574,8 +614,24 @@ span {
     }
 }
 @media only screen and (min-width: 1624px) {
-    img {
-        height: 30em;
+
+    header {   
+        .navbar-brand {
+            width: 30%;
+            .logo {
+                width: 50%;
+            }
+        }
+    }
+    .carrusel {
+        .w-100 {
+            height: 27em;
+        }
+    }   
+    .banners {
+        .imgBanner {
+            height: 28em;
+        }
     }
     .plazoFijo_importe input {
         width: 40%;
