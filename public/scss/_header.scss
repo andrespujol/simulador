@@ -1,0 +1,46 @@
+header { 
+    .bg-light {
+        background-color: #212227 !important;
+    }
+    .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link {
+        color: white;
+    }
+    .navbar-light .navbar-brand:hover, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link:hover {
+        color: #333646
+    }
+        .container-fluid {
+            display: flex;
+            justify-content: space-between;
+        }
+        .navbar-brand {
+            width: 50%;
+            .logo {
+                width: 100%;
+            }
+        }
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+}
+
+@media only screen and (min-width: 769px) {
+    header {     
+    .navbar-brand {
+        width: 40%;
+        .logo {
+            width: 70%;
+        }
+    }
+}
+}
+@media only screen and (min-width: 1624px) {
+
+    header {   
+        .navbar-brand {
+            width: 30%;
+            .logo {
+                width: 50%;
+            }
+        }
+    }
+}

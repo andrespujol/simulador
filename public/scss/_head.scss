@@ -1,0 +1,159 @@
+.carrusel {
+    height: 50vh;
+    .w-100 {
+        height: 25vh;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        bottom: 10em;
+    }        
+    .carrusel-info {
+        text-align: center;
+        padding-top: 1em;
+        & h3 {
+            height: 10vh;
+        }
+        .btnSimula {
+            border: none;
+            background-color: #212227;
+            border-radius: 10px;
+            width: 10em;
+            color: white;
+        }
+    }
+}
+
+.banner {
+    .divBanner {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        background-color: #8D9D90;
+        height: 4em;
+        margin: 2em 0;
+        & p {
+            text-align: center;
+            padding-top: 5%;
+        }
+    }
+}
+.emprendedor{
+    margin-bottom: 1em;
+    & .emprendedorArticle {
+        width: 90%;
+        margin: 0 auto;
+        & img{
+            width: 100%;
+            margin-bottom: 1em;
+            border-radius: 10px;
+        }
+        &:hover img {
+            box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.68);
+            -webkit-box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.68);
+            -moz-box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.68);
+        }
+        & h4, & p{
+            text-align: center;
+        }
+        .btnConoceMas {
+            width: 60%;
+            margin-left: 20%;
+            border: none;
+            background-color: #212227;
+            height: 3em;
+            border-radius: 5px;
+            color: white;
+        }
+    }
+}
+.demoPlazoFijo {
+    margin-bottom: 1em;
+    .demoPlazoFijo_banner img{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 481px) {
+
+    .carrusel {
+        height: 60vh;
+        .w-100 {
+            height: 30vh;
+        }
+        .carrusel-info {
+            & h3 {
+                height: 12vh;
+            }
+            & p {
+                height: 8vh;
+            }
+        }
+        & .carousel-control-prev, & .carousel-control-next  {
+            bottom: 13rem;
+        }
+
+    }   
+}
+@media only screen and (min-width: 769px) {
+    .carrusel {
+        height: 75vh;
+        .w-100 {
+            height: 25em;
+        }
+        .carrusel-info {
+            & h3 {
+                height: 5vh;
+            }
+            & p {
+                height: 5vh;
+            }
+        }
+        & .carousel-control-prev, & .carousel-control-next  {
+            bottom: 13rem;
+        }
+    }   
+    .banner {
+        .divBanner {
+            width: 100%;
+            & p {
+                text-align: center;
+                margin: 0 auto;
+                padding: 0;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1224px) {
+    .carrusel {
+        .w-100 {
+            height: 26.3em;
+        }
+    }   
+}
+
+@media only screen and (min-width: 1624px) {
+    .carrusel {
+        height: 75vh;
+        margin-bottom: 10rem;
+        .w-100 {
+            height: 70vh;
+        }
+        .carrusel-info {
+            & h3 {
+                height: 3vh;
+            }
+            & p {
+                height: 3vh;
+            }
+        }
+    }
+    .carrusel-info {
+        text-align: center;
+        padding-top: 1em;
+        .btnSimula {
+            border: none;
+            background-color: #212227;
+            border-radius: 10px;
+            width: 10em;
+            color: white;
+        }
+    }   
+}

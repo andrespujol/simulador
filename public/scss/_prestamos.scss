@@ -1,0 +1,137 @@
+.simulador {
+    background-color: #878E76;
+    margin-bottom: 1em;
+    height: 12em;
+    .simulador__container  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 11em;
+        .prestamoHipotecario h3, .prestamoPersonal h3{
+            text-align: center;
+            padding-top: 0.5em;
+        }
+        label {
+            padding-left: 5px;
+        }
+        .valor {
+            width: 10em;
+        }
+        input, select {
+            border: 2px solid #212227;
+            border-radius: 5px;
+        }
+        .cuotas {
+            padding-top: 5px;
+            select {
+                width: 2.7em;
+            }
+        }
+    }
+}
+
+.resultados {
+    background-color: #8D9D90;
+    padding-left: 5px;
+    margin-bottom: 1em;
+    display: none;
+    .main__resultados {
+        width: 90%;
+        margin: 0 auto;
+        .infoResultados {
+            padding-top: 1em;
+            .infoResultados p {
+                margin: 0;
+            }
+        }
+        .datosDeContacto {
+            padding: 1em 0;
+            margin: 0 auto;
+            margin-left: 5%;
+            .datos_nombre, .datos_email {
+                width: 90%;
+                margin: 0 auto;
+                border-radius: 5px;
+            }
+            & input:focus {
+                outline: none; 
+                border: 2px solid red;
+                background-color: #e8ecdf;
+                
+            }
+        }
+        .mensajeContacto {
+            display: none;
+            #mensajeContacto-final {
+                padding: 1em;
+                text-align: center;
+            }
+        }
+    }
+}
+.registros {
+    background-color: #ABC4A1;
+    display: none;
+    margin-bottom: 1em;
+    .mostrarRegistros {
+        padding-bottom: 1em;
+    }
+    .mostrarRegistros h3 {
+        text-align: center;
+        padding: 1em 0;
+    }
+    .mostrarRegistros ul{
+        width: 95%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .mostrarRegistros ul li {
+        border: 2px solid #212227;
+        list-style: none;
+        padding-left: 5px;
+        text-align: center;
+        border-radius: 5px;
+        margin-bottom: 1em;
+    }
+}
+.requisitos {
+    background-color: #c8d6cb;
+    margin-bottom: 1em;
+    .requisitosDiv {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 1em;
+    }
+    .requisitosDiv h3 {
+        text-align: center;
+        padding-top: 1em;
+    }
+    .requisitosDiv ul li {
+        padding-bottom: 5px;
+    }
+}
+
+
+@media only screen and (min-width: 769px) {
+    .resultados {
+        & .main__resultados{
+            & .datosDeContacto {
+                width: 50%;
+                margin-left: 25%;
+                .datos_nombre, .datos_email {
+                    width: 100%;
+                }
+                & button {
+                    width: 50%;
+                }
+            }
+        }
+    }
+    .registros {
+        & .mostrarRegistros {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+
+}
