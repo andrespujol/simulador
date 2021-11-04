@@ -117,7 +117,16 @@ header .navbar-collapse {
     .banner .divBanner p {
       text-align: center;
       margin: 0 auto;
-      padding: 0; } }
+      padding: 0; }
+  .emprendedor {
+    display: flex;
+    flex-wrap: wrap; }
+    .emprendedor .emprendedorArticle {
+      width: 40%; }
+      .emprendedor .emprendedorArticle img {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover; } }
 
 @media only screen and (min-width: 1224px) {
   .carrusel .w-100 {
@@ -144,9 +153,12 @@ header .navbar-collapse {
       color: white; } }
 
 .banners {
-  width: 100%; }
+  width: 100%;
+  height: 70vh; }
   .banners img {
-    width: 100%; }
+    width: 100%;
+    height: 50%;
+    object-fit: fill; }
   .banners h1 {
     font-size: 2rem;
     font-weight: bold; }
@@ -298,6 +310,11 @@ header .navbar-collapse {
     border-radius: 2%; }
 
 @media only screen and (min-width: 481px) {
+  .banners {
+    height: 60vh;
+    margin-bottom: 2rem; }
+    .banners img {
+      height: 70%; }
   .plazoFijo .plazoFijo_importe {
     width: 100%; }
     .plazoFijo .plazoFijo_importe h1, .plazoFijo .plazoFijo_importe p {
@@ -318,10 +335,14 @@ header .navbar-collapse {
     border-radius: 2%; } }
 
 @media only screen and (min-width: 769px) {
-  .banners h1 {
-    font-size: 2.5rem; }
-  .banners p {
-    font-size: 1.5rem; }
+  .banners {
+    height: 80vh; }
+    .banners img {
+      height: 70%; }
+    .banners h1 {
+      font-size: 2.5rem; }
+    .banners p {
+      font-size: 1.5rem; }
   .plazoFijo_importe h2 {
     text-align: center; }
   .plazoFijo_importe p {
@@ -356,8 +377,11 @@ header .navbar-collapse {
     margin-left: 25%; } }
 
 @media only screen and (min-width: 1624px) {
-  .banners .imgBanner {
-    height: 45vh; }
+  .banners {
+    height: 70vh; }
+    .banners .imgBanner {
+      height: 80%;
+      object-fit: cover; }
   .plazoFijo .plazoFijo_importe input {
     width: 30%;
     margin-left: 35%; }

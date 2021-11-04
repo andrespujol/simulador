@@ -1,7 +1,10 @@
 .banners {
     width: 100%;
+    height: 70vh;
     & img {
         width: 100%;
+        height: 50%;
+        object-fit: fill;
     }
     & h1 {
         font-size: 2rem;
@@ -209,6 +212,13 @@
 }
 
 @media only screen and (min-width: 481px){
+    .banners {
+        height: 60vh;
+        margin-bottom: 2rem;
+        & img {
+            height: 70%;
+        }
+    }
     .plazoFijo {
         & .plazoFijo_importe {
             width: 100%;
@@ -240,6 +250,10 @@
 
 @media only screen and (min-width: 769px) {
     .banners {
+        height: 80vh;
+        & img {
+            height: 70%;
+        }
         & h1 {
             font-size: 2.5rem;
         }
@@ -286,8 +300,8 @@
             width: 100%;
         }
     }
-
 }
+
 @media only screen and (min-width: 1024px) {
     .plazoFijo {
         & .plazoFijo_importe {
@@ -300,10 +314,12 @@
     }
 
 }
-@media only screen and (min-width: 1624px) { 
+@media only screen and (min-width: 1624px)  { 
     .banners {
+        height: 70vh;
         .imgBanner {
-            height: 45vh;
+            height: 80%;
+            object-fit: cover;
         }
     }
     .plazoFijo {
