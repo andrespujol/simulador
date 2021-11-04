@@ -316,9 +316,10 @@
 }
 @media only screen and (min-width: 1624px)  { 
     .banners {
-        height: 70vh;
+        height: 85vh;
+        margin-bottom: 0;
         .imgBanner {
-            height: 80%;
+            height: 70%;
             object-fit: cover;
         }
     }
