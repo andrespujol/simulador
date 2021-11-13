@@ -14,7 +14,7 @@
         }
         .btnSimula {
             border: none;
-            background-color: #212227;
+            background-color: $base-color;
             border-radius: 10px;
             width: 10em;
             color: white;
@@ -58,7 +58,7 @@
             width: 60%;
             margin-left: 20%;
             border: none;
-            background-color: #212227;
+            background-color: $base-color;
             height: 3em;
             border-radius: 5px;
             color: white;
@@ -162,10 +162,18 @@
         padding-top: 1em;
         .btnSimula {
             border: none;
-            background-color: #212227;
+            background-color: $base-color;
             border-radius: 10px;
             width: 10em;
             color: white;
         }
     }   
+    .demoPlazoFijo {
+        & .demoPlazoFijo_banner{
+            & img {
+                height: 40vh;
+            }
+        } 
+    }
+    
 }

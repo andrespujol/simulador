@@ -1,6 +1,6 @@
 header { 
     .bg-light {
-        background-color: #212227 !important;
+        background-color: $base-color !important;
     }
     .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link {
         color: white;

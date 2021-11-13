@@ -1,8 +1,8 @@
+@import "variables";
 @import "header";
 @import "head";
 @import "inversiones";
 @import "prestamos";
-
 body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
@@ -15,7 +15,7 @@ h3, h4 {
 }
 
 footer {
-    background-color: #212227;
+    background-color: $base-color;
     height: 3em;
     display: flex;
     align-items:center;
@@ -39,7 +39,7 @@ footer {
     width: 5em;
     margin-top: 1em;
     border-radius: 5px;
-    background-color: #212227 !important;
+    background-color: $base-color !important;
     color: white;
 }
 .btnPrestamos:hover, .btnDatos:hover, .btnSimula:hover,  .emprendedorInfo button:hover {
